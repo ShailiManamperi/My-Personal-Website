@@ -9,11 +9,11 @@
     scroll-behavior: smooth;
 }
 :root{
-    --bg-color :#1f242d;
-    --second-bg-color :#323946;
-    --text-color: #fff;
-    --main-color : #0ef;
-    --text-span-color : #05BFDB;
+    --bg-color :#1A1A1B;
+    --second-bg-color :#333F44;
+    --text-color: #E2F3F5;
+    --main-color : #37AA9C;
+    --text-span-color : #94F3E4;
 }
 html{
     font-size: 62.5%;
@@ -275,6 +275,85 @@ span{
     color: var(--second-bg-color);
     align-items: center;
 }
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3,0.5fr);
+    align-items: center;
+    gap: 0.5rem;
+}
+.card {
+    position: relative;
+    height: 347px;
+    width: 450px;
+    /*margin: 2rem;*/
+}
+.card-side.front img{
+    width: 315px;
+    height: 215px;
+    position: center;
+    transition: .5s ease;
+    border-radius: 3rem;
+}
+.card-side.back h4{
+    display: inline;
+    justify-content: center;
+    font-size: 3rem;
+}
+.card-side.back p{
+    font-size: 2rem;
+    margin: .3rem 0 1rem;
+}
+.card-side.back a{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.cardview{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 1rem;
+}
+.card-side.back a i{
+    font-size: 50px;
+    color: var(--second-bg-color);
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.card-side {
+    height: 250px;
+    border-radius: 15px;
+    transition: all 0.8s ease;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    padding: 2rem;
+    color: white;
+}
+.card-side.back {
+    transform: rotateY(-180deg);
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #34699A 0%,#29A19C 66%, #FFCC70 100%);
+}
+
+.card-side.front {
+    background-color: #0093E9;
+    background-image: linear-gradient(to bottom left, #65c6c4 0%, #408ab4 100%);
+}
+
+.card:hover .card-side.front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-side.back {
+    transform: rotateY(0deg);
+}
 .contact h2{
     margin-bottom: 3rem;
 }
@@ -459,10 +538,16 @@ span{
     .portfolio-container{
         grid-template-columns: repeat(2,1fr);
     }
+    .card-container{
+        grid-template-columns: repeat(2,1fr);
+    }
 }
 
 @media (max-width: 617px) {
     .portfolio-container{
+        grid-template-columns: 1fr;
+    }
+    .card-container{
         grid-template-columns: 1fr;
     }
 }
