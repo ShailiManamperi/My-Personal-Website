@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation Transition</title>
+    <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+
+        section>div{
+            width: 250px;
+            height: 50px;
+            background-color: mediumpurple;
+            transition-duration: 2s;
+            position: relative;
+            margin: 10px 0px 10px 0px;
+            right: 210px;
+
+        }
+        section>div:hover{
+            width: 250px;
+            height: 50px;
+            background-color: pink;
+            right: 10px;
+        }
+        section>div>h3{
+            position: absolute;
+            width: max-content;
+            height: max-content;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            margin: auto;
+
+        }
+        section>div>i{
+            position: absolute;
+            display: block;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            height: max-content;
+        }
+
+    </style>
+</head>
+<body>
+<section>
+    <div><h3>Menu One</h3><i class="fa-solid fa-address-book"></i></div>
+    <div><h3>Menu Two</h3><i class="fa-solid fa-truck-medical"></i></div>
+    <div><h3>Menu Three</h3><i class="fa-solid fa-truck-medical"></i></div>
+    <div><h3>Menu Four</h3><i class="fa-solid fa-layer-group"></i></div>
+    <div><h3>Menu Five</h3><i class="fa-solid fa-cart-plus"></i></div>
+</section>
+</body>
+</html>

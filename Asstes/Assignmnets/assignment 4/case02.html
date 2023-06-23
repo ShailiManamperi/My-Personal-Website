@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cricle Border Transition</title>
+    <style>
+        body{
+            margin: auto;
+            background-color: dodgerblue;
+        }
+
+        section{
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            background-color: gray;
+
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        section>h1{
+            color: white;
+            width: max-content;
+            height: max-content;
+            position: fixed;
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+        section:hover::before{
+            transform: rotate(360deg);
+            transition-duration: 3s;
+        }
+        /*virtual element*/
+        section::before{
+            content: "";
+            border-radius: 100%;
+            border: 10px solid white;
+            border-top: 10px solid red;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+        }
+    </style>
+</head>
+<body>
+<section>
+    <h1>RWAD</h1>
+</section>
+</body>
+</html>
