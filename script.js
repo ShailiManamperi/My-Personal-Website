@@ -45,8 +45,8 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .qulification-container, .card-container, .contact form, .assignment-container, .contact-right', { origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
+ScrollReveal().reveal('.home-img, .qulification-container, .card-container, .contact form, .assignment-container', { origin: 'bottom' });
+ScrollReveal().reveal('.home-content h1, .about-img, .contact-left', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 
